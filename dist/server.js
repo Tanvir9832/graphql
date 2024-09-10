@@ -18,7 +18,12 @@ const server = new server_1.ApolloServer({
     resolvers: {
         Query: {
             hello: () => "Hello world"
-        }
+        },
+        // course : {
+        //     instructor : async(course)=>{
+        //         return await getUserById(course.id!);
+        //     }
+        // }
     }
 });
 (0, standalone_1.startStandaloneServer)(server, {

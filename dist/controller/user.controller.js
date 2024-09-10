@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getUser = exports.getAllUsers = void 0;
+exports.getUserById = exports.getUser = exports.getAllUsers = void 0;
 const user_model_1 = require("../model/user.model");
 const getAllUsers = () => __awaiter(void 0, void 0, void 0, function* () {
     const data = yield user_model_1.User.find();
@@ -21,3 +21,8 @@ const getUser = () => __awaiter(void 0, void 0, void 0, function* () {
     return data;
 });
 exports.getUser = getUser;
+const getUserById = (id) => __awaiter(void 0, void 0, void 0, function* () {
+    const user = yield user_model_1.User.find(id);
+    return user;
+});
+exports.getUserById = getUserById;

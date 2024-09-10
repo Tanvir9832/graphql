@@ -16,7 +16,9 @@ const getAllCourses = () => __awaiter(void 0, void 0, void 0, function* () {
     return courses;
 });
 exports.getAllCourses = getAllCourses;
-const getCourseById = () => __awaiter(void 0, void 0, void 0, function* () {
-    const course = yield course_model_1.Course.findById("sdg");
+const getCourseById = (parent, arg) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log(arg.id);
+    const course = yield course_model_1.Course.findById(arg.id);
+    return course;
 });
 exports.getCourseById = getCourseById;

@@ -5,6 +5,8 @@ export const getAllCourses = async()=>{
     return courses;
 }
 
-export const getCourseById = async()=>{
-    const course = await Course.findById("sdg");
+export const getCourseById = async(parent : any, arg : {id: string})=>{
+    console.log(arg.id);
+    const course = await Course.findById(arg.id);
+    return course;
 }

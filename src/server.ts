@@ -5,6 +5,7 @@ import { schema } from './graphql/schema/schema';
 import { connectDB } from './database/database';
 
 import dotenv from 'dotenv';
+import { getUserById } from './controller/user.controller';
 // import { getAllUsers } from './controller/user.controller';
 
 dotenv.config();
@@ -23,6 +24,12 @@ const server = new ApolloServer({
         Query : {
             hello : ()=>"Hello world"
         }
+        ,
+        // course : {
+        //     instructor : async(course)=>{
+        //         return await getUserById(course.id!);
+        //     }
+        // }
     }
 
 })

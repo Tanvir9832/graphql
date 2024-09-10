@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.schema = void 0;
-exports.schema = `
+exports.schema = `#graphql
     type User {
         _id: ID!
         name: String!
@@ -34,5 +34,6 @@ exports.schema = `
 
     type Query {
         hello : String
+        course(id: ID!) : Course
     }
 `;

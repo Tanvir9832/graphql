@@ -1,6 +1,6 @@
 
 
-export const schema = `
+export const schema = `#graphql
     type User {
         _id: ID!
         name: String!
@@ -33,5 +33,6 @@ export const schema = `
 
     type Query {
         hello : String
+        course(id: ID!) : Course
     }
 `;
