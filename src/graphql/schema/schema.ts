@@ -13,10 +13,25 @@ export const schema = `
         updatedAt: String!
     }
 
+    type Course {
+        _id: ID!
+        title: String!,
+        description: String!,
+        instructor: User!,
+        ratingAverage: Int!,
+        ratingQuantity: Int!,
+        price: Int!,
+        level: String!,
+        whatYouWillLearn: [String]!,
+        requirements: [String]!,
+        targetAudience: [String],
+        isPublished: [Boolean],
+        students: [String]!,
+        createdAt: String,
+        updatedAt: String
+    }
+
     type Query {
         hello : String
-        data : String
-        data2 : [String]
-        users: [User]
-    },
+    }
 `;

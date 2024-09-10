@@ -8,6 +8,7 @@ const standalone_1 = require("@apollo/server/standalone");
 const schema_1 = require("./graphql/schema/schema");
 const database_1 = require("./database/database");
 const dotenv_1 = __importDefault(require("dotenv"));
+// import { getAllUsers } from './controller/user.controller';
 dotenv_1.default.config();
 // Create an Express application
 const port = 3000;
@@ -16,11 +17,9 @@ const server = new server_1.ApolloServer({
     typeDefs: schema_1.schema,
     resolvers: {
         Query: {
-            hello: () => "Hello world",
-            data: () => "apple",
-            data2: () => ["apple", "orange"]
+            hello: () => "Hello world"
         }
-    },
+    }
 });
 (0, standalone_1.startStandaloneServer)(server, {
     listen: {

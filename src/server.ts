@@ -5,6 +5,7 @@ import { schema } from './graphql/schema/schema';
 import { connectDB } from './database/database';
 
 import dotenv from 'dotenv';
+// import { getAllUsers } from './controller/user.controller';
 
 dotenv.config();
 
@@ -20,11 +21,9 @@ const server = new ApolloServer({
     typeDefs : schema,
     resolvers : {
         Query : {
-            hello : ()=>"Hello world",
-            data: ()=>"apple",
-            data2: ()=> ["apple", "orange"]
+            hello : ()=>"Hello world"
         }
-    },
+    }
 
 })
 

@@ -1,5 +1,12 @@
+import { User } from "../model/user.model"
 
 
-const getAllData=async()=>{
-    // const data = await User
+export const getAllUsers=async()=>{
+    const data = await User.find();
+    return data;
+}
+
+export const getUser=async()=>{
+    const data = await User.find();
+    return data;
 }
